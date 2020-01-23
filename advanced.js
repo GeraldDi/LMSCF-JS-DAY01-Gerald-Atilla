@@ -39,10 +39,11 @@ var vienna = [ ["Vienna", null, null, null, null],
 				[null, null, null, "nice", null], 
 				[null, null, null, null, "city"]];
 document.write("<br>")
+document.write("<br>");
 document.write(vienna[0][0]," ",vienna[1][1]," ",vienna[2][2]," ",vienna[3][3]," ",vienna[4][4]);
 
 
-var stringman = "Properties,$a$set$of$immutable$values,$are$passed$to$a$component\'s$renderer$as$properties$in$its $HTML$tag.$A$component$cannot$directly$modify$any$properties$passed$to$it,$but$can$be$passed$ callback$functions$that$do$modify$values.$This$mechanism's$promise$is$expressed$as$\"properties $flow$down;$actions$flow$up\"."
+var stringman = "Properties,$a$set$of$immutable$values,$are$passed$to$a$component\'s$renderer$as$properties$in$its $HTML$tag.$A$component$cannot$directly$modify$any$properties$passed$to$it,$but$can$be$passed$ callback$functions$that$do$modify$values.$This$mechanism's$promise$is$expressed$as$\"properties $flow$down;$actions$flow$up\".";
 
 var temp = new  Array();
 temp = stringman.split('$');
@@ -50,8 +51,13 @@ console.log(temp);
 document.write("<br>");
 document.write("<br>");
 document.write(temp);
-
 document.write("<br>");
-var stringma2n = "Properties,$a$set$of$immutable$values,$are$passed$to$a$component\'s$renderer$as$properties$in$its $HTML$tag.$A$component$cannot$directly$modify$any$properties$passed$to$it,$but$can$be$passed$ callback$functions$that$do$modify$values.$This$mechanism's$promise$is$expressed$as$\"properties $flow$down;$actions$flow$up\"."
-var strnew= stringma2n.replace("$", " ")
+document.write("<br>"); 
+
+
+var stringt = "Properties,$a$set$of$immutable$values,$are$passed$to$a$component\'s$renderer$as$properties$in$its $HTML$tag.$A$component$cannot$directly$modify$any$properties$passed$to$it,$but$can$be$passed$ callback$functions$that$do$modify$values.$This$mechanism's$promise$is$expressed$as$\"properties $flow$down;$actions$flow$up\".";
+var strnew= stringt.replace(/\$/g ," ");   /* stringt.replace("$" ," ") does only change the first value. I can use a global replace:stringt.replace(/"$"/g ,"XXX")
+but the global replace does not work with the $ symbole
+You need to escape the $ because it has the meaning of "an arbitrary character" in a regular expression.  */
 document.write(strnew);
+console.log(strnew);
