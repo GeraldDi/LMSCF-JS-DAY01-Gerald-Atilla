@@ -17,7 +17,7 @@ console.log(animals.sort());
 
 var newfruits = "mango/cherries/kiwi/grapes/pear/peach/orange/lemon";
 var temp = new  Array();
-temp = newfruits.split('/'); //es istjetzt getrennt ich weis aber nicht wie ichesin unterschiedlichezeilenschiebe
+temp = newfruits.split('/');
 
 document.write(temp[0]);
 document.write("<br>");
