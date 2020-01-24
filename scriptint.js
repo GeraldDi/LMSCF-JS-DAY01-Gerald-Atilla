@@ -1,5 +1,10 @@
 var cars=['Tesla', 'Audi', 'Renault', 'Volvo', 'Mazda', 'Fiat', 'Ferrari'];
-console.log(cars.sort());
+console.log(cars.sort()); //the wanted order is identical to the alphabetic order ->therefore it can be done like that
+
+var cars2=['Tesla', 'Audi', 'Renault', 'Volvo', 'Mazda', 'Fiat', 'Ferrari']; //different way that still works when order should be different from  alphabetic
+console.log(cars2[1], cars2[6],cars2[5],cars2[4],cars2[0],cars2[3],);
+var cars3=[cars2[1], cars2[6],cars2[5],cars2[4],cars2[0],cars2[3],];
+console.log(cars3)
 
 var fruits =['Apple','Banana','Kiwi',];
 console.log(fruits.slice(0,3));//Start
@@ -19,6 +24,7 @@ var newfruits = "mango/cherries/kiwi/grapes/pear/peach/orange/lemon";
 var temp = new  Array();
 temp = newfruits.split('/');
 
+/* not efficient solution a loop will betterfor this
 document.write(temp[0]);
 document.write("<br>");
 document.write(temp[1]);
@@ -33,7 +39,14 @@ document.write(temp[5]);
 document.write("<br>");
 document.write(temp[6]);
 document.write("<br>");
-document.write(temp[7]);
+document.write(temp[7]);  */
+
+var tempcount =0;
+while (tempcount <8) {
+	document.write(temp[tempcount]);
+	document.write("<br>");
+	tempcount++;
+}
 
 
 
